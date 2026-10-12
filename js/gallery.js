@@ -88,10 +88,12 @@ function createMarkup(arr) {
 }
 
 function handleClick(event) {
-  if (event.target === event.currentTarget) {
-    return;
-  }
+  event.preventDefault();
+  // if (event.target === event.currentTarget) return;
+  if (event.target.nodeName !== 'IMG') return;
 
-  const parentEl = event.target.closest('.gallery-link');
-  console.log(parentEl);
+  const pictureUrl = event.target.dataset.sourse;
+  const pictureAlt = event.target.alt;
+
+  console.log(pictureAlt);
 }
