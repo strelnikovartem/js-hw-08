@@ -89,14 +89,10 @@ function createMarkup(arr) {
 
 function handleClick(event) {
   event.preventDefault();
-  // if (event.target === event.currentTarget) return;
   if (event.target.nodeName !== 'IMG') return;
 
   const pictureUrl = event.target.dataset.source;
   const pictureAlt = event.target.alt;
-
-  console.log(pictureUrl);
-  console.log(pictureAlt);
 
   const instance = basicLightbox.create(`
   	 <div class="modal">

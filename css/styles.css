@@ -15,10 +15,20 @@ a {
   text-decoration: none;
 }
 
+.section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 36px;
+  margin: 0 auto;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 24px;
 }
 
