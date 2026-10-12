@@ -92,8 +92,17 @@ function handleClick(event) {
   // if (event.target === event.currentTarget) return;
   if (event.target.nodeName !== 'IMG') return;
 
-  const pictureUrl = event.target.dataset.sourse;
+  const pictureUrl = event.target.dataset.source;
   const pictureAlt = event.target.alt;
 
+  console.log(pictureUrl);
   console.log(pictureAlt);
+
+  const instance = basicLightbox.create(`
+  	 <div class="modal">
+        <img src="${pictureUrl}" alt="${pictureAlt}">
+      </div>
+  `);
+
+  instance.show();
 }
