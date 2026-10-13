@@ -65,6 +65,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
+
 gallery.insertAdjacentHTML('beforeend', createMarkup(images));
 gallery.addEventListener('click', handleClick);
 
@@ -79,6 +80,7 @@ function createMarkup(arr) {
             src="${item.preview}"
             data-source="${item.original}"
             alt="${item.description}"
+            width="360"
            />
         </a>
       </li>
@@ -95,9 +97,7 @@ function handleClick(event) {
   const pictureAlt = event.target.alt;
 
   const instance = basicLightbox.create(`
-  	 <div class="modal">
-        <img src="${pictureUrl}" alt="${pictureAlt}">
-      </div>
+  	<img src="${pictureUrl}" alt="${pictureAlt}">
   `);
 
   instance.show();
